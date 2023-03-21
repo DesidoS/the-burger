@@ -3,7 +3,7 @@ import ErrorPage from "./pages/ErrorPage";
 // import store from "./store";
 
 const Homepage = () => import("./pages/Homepage");
-const Apartment = () => import("./pages/Apartment");
+const Burger = () => import("./pages/Burger");
 const LoginPage = () => import("./pages/Login");
 
 const routes = [
@@ -18,9 +18,9 @@ const routes = [
     name: "homepage",
   },
   {
-    path: "/apartments/:id",
-    component: Apartment,
-    name: "apartment",
+    path: "/api/:id",
+    component: Burger,
+    name: "burger",
     // meta: {
     //   requiresAuth: true,
     // },

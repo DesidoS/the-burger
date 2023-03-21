@@ -1,19 +1,19 @@
-import Vuex from "vuex";
-import Vue from "vue";
-import authModule from "./modules/auth";
-import createPersistedState from "vuex-persistedstate";
+// import Vuex from "vuex";
+// import Vue from "vue";
+// // import authModule from "./modules/auth";
+// import createPersistedState from "vuex-persistedstate";
 
-Vue.use(Vuex);
+// Vue.use(Vuex);
 
-const dataState = createPersistedState({
-  paths: ["auth.token"],
-});
+// const dataState = createPersistedState({
+//   paths: ["auth.token"],
+// });
 
-const store = new Vuex.Store({
-  modules: {
-    auth: authModule,
-  },
-  plugins: [dataState],
-});
+// const store = new Vuex.Store({
+//   modules: {
+//     // auth: authModule,
+//   },
+//   plugins: [dataState],
+// });
 
-export default store;
+// export default store;

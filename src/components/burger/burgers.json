@@ -1,0 +1,287 @@
+[
+  {
+    "title": "Florida.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/TFXHVZ-QDzlnMf-kbkJikS.jpeg",
+    "descr": "Булочка солодова, овочі гриль (цукіні, баклажан, червона цибуля, болгарський перець), моцарелла, соус BBQ, салат бостон, свіжі томати. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 210,
+    "weight": 300,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Kid's burger.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/YIkxAaC-lsHxGyT-kxEYksP.jpeg",
+    "descr": "булка з кунжутом, котлета з мармурової яловичини, цибуля свіжа, томат, мариновані огірки, салат айсберг, соус BBQ (подається окремо). Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 210,
+    "weight": 190,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Arkansas.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/GkdUWHx-nbDIkQp-znDmHpF.jpeg",
+    "descr": "булка з кунжутом, котлета з мармурової яловичини, цибуля свіжа, томат, мариновані огірки, салат айсберг, соус BBQ (подається окремо). Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 340,
+    "weight": 325,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Indiana.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/olAixEE-WIJIISc-lhnCtmF.jpeg",
+    "descr": "булка з кунжутом, котлета з індички, чеддер, карамелізоване яблуко, салат бостон, соус Дор блю. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 270,
+    "weight": 285,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "New Orleans.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/QGMHlBZ-TlsLkwN-DVteecC.jpeg",
+    "descr": "булка з кунжутом, котлета з яловичини, сир Дор блю, карамелізована цибуля, мариновані огірки, соус BBQ. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 290,
+    "weight": 300,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Tennesse.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/cEQxdsD-TtGUVqI-EwGxgTv.jpeg",
+    "descr": "булка бріош обсмажена на грилі, котлета з яловичини з трюфельною пастою, томати, сир чеддер, соус трюфельний. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 360,
+    "weight": 360,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Colorado (Meet Not Meat).",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/HZBZtw-TIsaBGV-GKZPEEG.jpeg",
+    "descr": "мексиканська тортилья або веганська булка на ваш вибір, котлета Meet Not Meat, свіжі томати, кільця цибулі, фрі, соус гуакамоле, веганський сир чеддер, веганський сирний соус, перець халапеньо. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 350,
+    "weight": 350,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "California.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/buXvar-HClXFtl-HldbUKp.jpeg",
+    "descr": "булка бріош, стейк Філе міньйон, листя шпинату, чіпси з пармезану, голландський соус. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 450,
+    "weight": 290,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Miami.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/klTvGoq-CDRGQEl-rCrFmDD.jpeg",
+    "descr": "булка обсмажена на грилі, котлета з креветки, авокадо, томат, руколла , соус том ям, пармезан. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 430,
+    "weight": 340,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Washington.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/kHEWQFb-IBJHyZr-KhQGzUb.jpeg",
+    "descr": "булка бріош, подвійна котлета, сир чеддер, айсберг, соус тар тар.",
+    "rating": 5,
+    "price": 390,
+    "weight": 350,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Carolina.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/rsVVFVv-ZSGrHOJ-DIIGJgz.jpeg",
+    "descr": "булка бріош, філе качки, соус Дор блю, карамелізоване яблуко, салат бостон, ягідний соус. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 330,
+    "weight": 290,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Crispy Burger.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/tDAMkZa-IcwtJrY-DYDIScA.jpeg",
+    "descr": "булка бріош, котлета з яловичини з сиром Камамбер, смажені печериці, джем з бекону, хрустка цибуля, пивний соус. Подається з картоплею фрі.",
+    "rating": 5,
+    "price": 370,
+    "weight": 425,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Kentucky.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/tqCQADO-aSgwksG-hmnhFwO.jpeg",
+    "descr": "булка з кунжутом, куряче філе, томат, салат бостон, соус Песто, майонез, моцарелла. Подається з картопляними діпами та салатом..",
+    "rating": 5,
+    "price": 270,
+    "weight": 280,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Maryland - Crab Burger.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/luqWGfH-yUYeyKB-DzZPFOR.jpeg",
+    "descr": "булка бріош, котлета з яловичини з сиром Камамбер, смажені печериці, джем з бекону, хрустка цибуля, пивний соус. Подається з картоплею фрі.",
+    "rating": 5,
+    "price": 370,
+    "weight": 425,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Naked Burger.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/yAWXyOz-jHXrgfC-mHcMDNe.jpeg",
+    "descr": "котлета з яловичини фарширована сиром чеддер, цибуля конфі, перець чилі, мариновані огірки. Подаємо з картопляними діпами, бататом та Coca-Cola.",
+    "rating": 5,
+    "price": 350,
+    "weight": 340,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "New York.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/yEBroOT-ACBtsQD-aGLGDCa.jpeg",
+    "descr": "булка з кунжутом, подвійна котлета з яловичини, чеддер, цибуля, томат, мариновані огірки, салат айсберг, салат бостон, соус BBQ, майонез. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 340,
+    "weight": 420,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Supreme Nacho.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/NqclRkk-HCkCzHZ-GwOiRFK.jpeg",
+    "descr": "мексиканська тортилья, котлета з яловичини, томат, цибуля свіжа, гуакамоле, бекон, халапеньо, чеддер, сирний соус, чіпси начос. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 360,
+    "weight": 390,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "Texas.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/DYNQMQn-IFoHfJi-LYVHcZe.jpeg",
+    "descr": "булка солодова, гостра котлета з яловичини, мариновані огірки, салат бостон, чилі, майонез. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 290,
+    "weight": 290,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "title": "The Burger.",
+    "imgUrl": "https://prod-choiceqr-media.s3.eu-central-1.amazonaws.com/prod-eat-theburger-menu/menu/ZWUREVJ-OkgLziD-DHGykYr.jpeg",
+    "descr": "булка з кунжутом, котлета з яловичини, бекон, чеддер, цибуля фрі, томат, мариновані огірки, салат айсберг, салат бостон, соус BBQ, майонез. Подається з картопляними діпами та салатом.",
+    "rating": 5,
+    "price": 330,
+    "weight": 390,
+    "comment": [
+      {
+        "author": "Ron",
+        "content": "lorem",
+        "rating": 4.5
+      }
+    ]
+  }
+]

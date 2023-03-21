@@ -5,32 +5,40 @@
         Welcome, {{ name }}! Choose you burger</MainTitle
       >
       <Container>
-        <ApartmentsList :items="apartments" />
+        <BurgersList :items="burgers" />
       </Container>
     </SectionWithHeaderSpacer>
   </main>
 </template>
 
 <script>
-import ApartmentsList from "../components/apartment/ApartmentsList.vue";
-import apartments from "../components/apartment/apartments.js";
+import BurgersList from "../components/burger/BurgersList.vue";
 import Container from "../components/shared/Container.vue";
 import SectionWithHeaderSpacer from "../components/shared/SectionWithHeaderSpacer";
 import MainTitle from "../components/shared/MainTitle";
+import { getBurgersList } from "../services/burgers.service";
 
 export default {
   name: "App",
   components: {
-    ApartmentsList,
+    BurgersList,
     Container,
     MainTitle,
     SectionWithHeaderSpacer,
   },
   data() {
     return {
-      apartments,
+      burgers: [],
       name: localStorage.getItem("Name"),
     };
+  },
+  async created() {
+    try {
+      const { data } = await getBurgersList();
+      this.burgers = data;
+    } catch (error) {
+      console.error(error);
+    }
   },
 };
 </script>

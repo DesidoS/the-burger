@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import ReviewsItem from './reviews-item'
-import Rating from '../StarRating'
+import ReviewsItem from "./reviews-item";
+import Rating from "../StarRating";
 
 export default {
-  name: 'ApartmentReviews',
+  name: "AppReviews",
   components: {
     ReviewsItem,
     Rating,
@@ -37,41 +37,44 @@ export default {
   data() {
     return {
       reviewsLimit: 2,
-    }
+    };
   },
   computed: {
     totalRating() {
-      const total = this.reviews.reduce((acc, review) => acc + review.rating, 0)
+      const total = this.reviews.reduce(
+        (acc, review) => acc + review.rating,
+        0
+      );
 
-      return total / this.reviews.length
+      return total / this.reviews.length;
     },
     amountOfReviews() {
-      return this.reviews.length
+      return this.reviews.length;
     },
     currentReviews() {
-      return this.reviews.slice(0, this.reviewsLimit)
+      return this.reviews.slice(0, this.reviewsLimit);
     },
     buttonText() {
       return this.reviewsLimit === this.reviews.length
-        ? 'Свернуть'
-        : 'Читать еще...'
+        ? "Свернуть"
+        : "Читать еще...";
     },
   },
   methods: {
     toggleReviews() {
       if (this.reviewsLimit === this.reviews.length) {
-        this.reviewsLimit = 2
-        return
+        this.reviewsLimit = 2;
+        return;
       }
 
-      this.reviewsLimit = this.reviews.length
+      this.reviewsLimit = this.reviews.length;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
 
 .reviews {
   margin-top: 20px;

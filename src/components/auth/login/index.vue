@@ -65,7 +65,7 @@ export default {
       this.$router.push({ name: "homepage" });
       this.$notify({
         type: "success",
-        title: "Welcome",
+        title: `Welcome ${this.formData.name}`,
       });
     },
   },
