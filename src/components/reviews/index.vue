@@ -1,5 +1,5 @@
 <template>
-  <section class="reviews">
+  <section v-if="reviews?.length" class="reviews">
     <div class="reviews__heading">
       <h2 class="reviews__title">Overall rating</h2>
       <div class="reviews__rating">
@@ -12,7 +12,11 @@
       :key="review.id"
       :review="review"
     />
-    <button @click="toggleReviews" class="reviews__show-more">
+    <button
+      v-if="!currentLength"
+      @click="toggleReviews"
+      class="reviews__show-more"
+    >
       {{ buttonText }}
     </button>
   </section>
@@ -37,6 +41,7 @@ export default {
   data() {
     return {
       reviewsLimit: 2,
+      showLimit: 2,
     };
   },
   computed: {
@@ -52,6 +57,9 @@ export default {
     },
     currentReviews() {
       return this.reviews.slice(0, this.reviewsLimit);
+    },
+    currentLength() {
+      return this.showLimit >= this.amountOfReviews;
     },
     buttonText() {
       return this.reviewsLimit === this.reviews.length ? "Hide" : "More...";
@@ -76,7 +84,7 @@ export default {
 .reviews {
   margin-top: 20px;
   background: $card-bg;
-  padding: 0 2px;
+  padding: 0 2px 1px 2px;
 
   &__heading {
     padding: 20px 20px 10px;
