@@ -2,15 +2,13 @@
   <main class="burger-page">
     <SectionWithHeaderSpacer>
       <Container>
-        <Button
-          class="burger-page__btn"
-          type="button"
-          @click="onBack"
+        <Button class="burger-page__btn" type="button" @click="onBack"
           >⬅️</Button
         >
         <div v-if="burger" class="burger-page__content">
           <BurgerMainInfo :burger="burger" />
           <div class="burger-page__additional-info">
+            <AppСomment :reviews="reviewsList" />
             <Reviews :reviews="reviewsList" />
           </div>
         </div>
@@ -24,6 +22,7 @@ import Container from "../components/shared/Container";
 import SectionWithHeaderSpacer from "../components/shared/SectionWithHeaderSpacer";
 import BurgerMainInfo from "../components/burger/BurgerMainInfo";
 import Reviews from "../components/reviews";
+import AppСomment from "../components/comment";
 import { getBurgerById } from "../services/burgers.service";
 import Button from "../components/shared/Button.vue";
 
@@ -35,6 +34,7 @@ export default {
     BurgerMainInfo,
     SectionWithHeaderSpacer,
     Reviews,
+    AppСomment,
   },
   data() {
     return {

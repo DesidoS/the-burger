@@ -9,7 +9,7 @@
     </div>
     <ReviewsItem
       v-for="review in currentReviews"
-      :key="review.author"
+      :key="review.id"
       :review="review"
     />
     <button @click="toggleReviews" class="reviews__show-more">
@@ -42,10 +42,9 @@ export default {
   computed: {
     totalRating() {
       const total = this.reviews.reduce(
-        (acc, review) => acc + review.rating,
+        (acc, review) => acc + review.rating.length,
         0
       );
-
       return total / this.reviews.length;
     },
     amountOfReviews() {
@@ -55,9 +54,7 @@ export default {
       return this.reviews.slice(0, this.reviewsLimit);
     },
     buttonText() {
-      return this.reviewsLimit === this.reviews.length
-        ? "Свернуть"
-        : "Читать еще...";
+      return this.reviewsLimit === this.reviews.length ? "Hide" : "More...";
     },
   },
   methods: {

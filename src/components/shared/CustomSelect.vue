@@ -41,10 +41,11 @@ export default {
 
 .custom-select {
   height: 40px;
-  max-width: 220px;
+  min-width: 100px;
   width: 100%;
   border: 2px solid $main-color;
   font-size: 18px;
+  text-align: center;
   outline: none;
   padding: 8px 15px;
   cursor: pointer;

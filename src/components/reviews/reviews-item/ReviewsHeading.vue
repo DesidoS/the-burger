@@ -3,17 +3,17 @@
     <Avatar class="reviews-heading__avatar" />
     <div class="reviews-heading__content">
       <span class="reviews-heading__author">{{ author }}</span>
-      <Rating :rating="rating" />
+      <Rating :rating="Number(rating.length)" />
     </div>
   </div>
 </template>
 
 <script>
-import Rating from '../../StarRating'
-import Avatar from './RevieasAvatar'
+import Rating from "../../StarRating";
+import Avatar from "./RevieasAvatar";
 
 export default {
-  name: 'ReviewsHeading',
+  name: "ReviewsHeading",
   components: {
     Rating,
     Avatar,
@@ -24,11 +24,11 @@ export default {
       required: true,
     },
     rating: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: "0",
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
