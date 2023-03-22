@@ -10,6 +10,9 @@
         autocomplete="name"
         name="name"
         class="login__input"
+        type="text"
+        required
+        pattern="[A-Za-z]+"
       />
       <MainTitle :level="2" class="login__title"
         >How old are you/Скільки вам років</MainTitle
@@ -20,6 +23,8 @@
         autocomplete="current-password"
         type="number"
         name="age"
+        required
+        pattern="[0-9]+"
         class="login__input"
       />
       <Button class="login__btn" type="submit" :loading="loading">Enter</Button>

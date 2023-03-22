@@ -55,8 +55,7 @@ export default {
       default: "",
     },
     comments: {
-      type: String,
-      default: "",
+      type: Array,
     },
   },
   computed: {
@@ -148,22 +147,18 @@ export default {
     height: 100%;
   }
 
-  // Добавляем стили для разных видов устройств:
-  // для устройств от 300px до 599px
   @media screen and (max-width: 599px) {
     .burgers-item {
       width: 100%;
     }
   }
 
-  // для устройств от 600px до 899px
   @media screen and (min-width: 600px) and (max-width: 899px) {
     .burgers-item {
       width: 50%;
     }
   }
 
-  // для устройств от 900px до 1200px
   @media screen and (min-width: 900px) and (max-width: 1200px) {
     .burgers-item {
       width: 33.33%;

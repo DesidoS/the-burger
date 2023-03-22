@@ -9,12 +9,15 @@
         v-model="formData.comment"
         placeholder="Comment"
         name="comment"
+        required
+        pattern="[A-Za-z]+"
       ></textarea>
       <CustomSelect
         :items="ratings"
         v-model="rating"
         aria-placeholder="asdasd"
         class="comment__select"
+        required
       />
       <Button class="comment__btn" type="submit" :loading="loading">
         Send
