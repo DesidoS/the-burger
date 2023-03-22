@@ -1,5 +1,8 @@
 <template>
   <article class="burgers-main-info">
+    <Button class="burgers-main-info__back" type="button" @click="onBack"
+      >⬅️</Button
+    >
     <div class="burgers-main-info__heading">
       <h1 class="burgers-main-info__title">{{ burger.title }}</h1>
     </div>
@@ -10,8 +13,13 @@
 </template>
 
 <script>
+import Button from "../shared/Button.vue";
+
 export default {
   name: "BurgerMainInfo",
+  components: {
+    Button,
+  },
   props: {
     burger: {
       type: Object,
@@ -23,11 +31,24 @@ export default {
       isLoading: false,
     };
   },
+  methods: {
+    onBack() {
+      this.$router.push({ name: "homepage" });
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .burgers-main-info {
+  display: flex;
+  flex-direction: column;
+  // @media screen and (min-width: 600px) and (max-width: 899px) {
+  //   // max-width: 50%;
+  // }
+  // @media screen and (min-width: 900px) {
+  //   // width: 33.33%;
+  // }
   &__heading {
     display: flex;
   }
@@ -52,6 +73,9 @@ export default {
   &__btn {
     margin-top: 20px;
     text-align: center;
+  }
+  &__back {
+    margin-bottom: 30px;
   }
 }
 </style>

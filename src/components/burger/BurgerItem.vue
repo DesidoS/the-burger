@@ -45,7 +45,6 @@ export default {
     },
     price: {
       type: Number,
-      // required: true,
     },
     imgUrl: {
       type: String,
@@ -62,8 +61,14 @@ export default {
 <style lang="scss" scoped>
 .burgers-item {
   position: relative;
-  width: 33.33%;
+  @media screen and (min-width: 600px) and (max-width: 899px) {
+    max-width: 50%;
+  }
+  @media screen and (min-width: 900px) {
+    width: 33.33%;
+  }
   padding: 0 15px;
+  margin: 0 auto;
   margin-bottom: 30px;
 
   &__inner {
@@ -128,6 +133,28 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  // Добавляем стили для разных видов устройств:
+  // для устройств от 300px до 599px
+  @media screen and (max-width: 599px) {
+    .burgers-item {
+      width: 100%;
+    }
+  }
+
+  // для устройств от 600px до 899px
+  @media screen and (min-width: 600px) and (max-width: 899px) {
+    .burgers-item {
+      width: 50%;
+    }
+  }
+
+  // для устройств от 900px до 1200px
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .burgers-item {
+      width: 33.33%;
+    }
   }
 }
 </style>

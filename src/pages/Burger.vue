@@ -2,9 +2,6 @@
   <main class="burger-page">
     <SectionWithHeaderSpacer>
       <Container>
-        <Button class="burger-page__btn" type="button" @click="onBack"
-          >⬅️</Button
-        >
         <div v-if="burger" class="burger-page__content">
           <BurgerMainInfo :burger="burger" />
           <div class="burger-page__additional-info">
@@ -24,12 +21,10 @@ import BurgerMainInfo from "../components/burger/BurgerMainInfo";
 import Reviews from "../components/reviews";
 import AppСomment from "../components/comment";
 import { getBurgerById } from "../services/burgers.service";
-import Button from "../components/shared/Button.vue";
 
 export default {
   name: "BurgerPage",
   components: {
-    Button,
     Container,
     BurgerMainInfo,
     SectionWithHeaderSpacer,
@@ -42,11 +37,7 @@ export default {
       reviewsList: [],
     };
   },
-  methods: {
-    onBack() {
-      this.$router.push({ name: "homepage" });
-    },
-  },
+
   async created() {
     try {
       const { id } = this.$route.params;
@@ -67,18 +58,18 @@ export default {
 
   &__content {
     display: flex;
-    align-items: flex-start;
+    @media screen and (max-width: 599px) {
+      flex-direction: column;
+    }
   }
 
   &__additional-info {
-    margin-left: 30px;
+    @media screen and (min-width: 600px) {
+      margin-left: 30px;
+    }
     max-width: 350px;
     flex-grow: 0;
     flex-shrink: 1;
-  }
-  &__btn {
-    margin-top: -50px;
-    margin-bottom: 30px;
   }
 }
 </style>
