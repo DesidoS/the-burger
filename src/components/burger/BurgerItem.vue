@@ -10,7 +10,7 @@
           {{ descr }}
         </p>
         <div class="burgers-item__rating">
-          <StarRating :rating="rating" />
+          <StarRating :rating="totalRating" />
         </div>
         <div class="burgers-item__price">UAH {{ price }}</div>
         <router-link
@@ -53,6 +53,19 @@ export default {
     title: {
       type: String,
       default: "",
+    },
+    comments: {
+      type: String,
+      default: "",
+    },
+  },
+  computed: {
+    totalRating() {
+      const total = this.comments.reduce(
+        (acc, comment) => acc + comment.rating.length,
+        0
+      );
+      return total / this.comments.length;
     },
   },
 };

@@ -2,7 +2,7 @@
   <Container>
     <div class="burger-list">
       <BurgerItem
-        v-for="{ _id, descr, price, rating, imgUrl, title } in items"
+        v-for="{ _id, descr, price, rating, imgUrl, title, comment } in items"
         :key="_id"
         :id="_id"
         :descr="descr"
@@ -10,6 +10,7 @@
         :rating="Number(rating)"
         :imgUrl="imgUrl"
         :title="title"
+        :comments="comment"
       />
     </div>
   </Container>

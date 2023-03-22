@@ -50,7 +50,6 @@ export default {
     ratings() {
       return [
         { value: "", label: "Please choose your rate", selected: true },
-        "☆☆☆☆☆",
         "★",
         "★★",
         "★★★",
