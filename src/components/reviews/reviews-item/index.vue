@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import ReviewsHeading from './ReviewsHeading'
+import ReviewsHeading from "./ReviewsHeading";
 
 export default {
-  name: 'ReviewsItem',
+  name: "ReviewsItem",
   components: {
     ReviewsHeading,
   },
@@ -19,7 +19,7 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -38,7 +38,6 @@ export default {
     margin-top: 20px;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
   }
 }
 </style>
