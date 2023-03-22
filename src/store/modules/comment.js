@@ -1,7 +1,7 @@
 import { addComment } from "../../services/reviews.service";
 
 const initialState = {
-  author: null,
+  author: "",
   rating: "",
   content: "",
 };
@@ -15,16 +15,17 @@ export default {
     },
   },
   mutations: {
-    setUserData(state, userData) {
-      state.user = userData;
-    },
-    clearUserData(state) {
-      Object.assign(state, { ...initialState });
+    setUserData(state, data) {
+      console.log("setUserData  data:", data);
+      console.log("setUserData  state:", state);
+      state = data;
+      console.log("setUserData  state:", state);
     },
   },
   actions: {
     async comment({ commit }, payload) {
-      const { data } = await addComment(payload);
+      const { data } = payload;
+      await addComment(payload);
       const { author, rating, content } = data;
 
       commit("setUserData", { author, rating, content });

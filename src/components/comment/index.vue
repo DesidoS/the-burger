@@ -3,7 +3,7 @@
     <div class="comment__heading">
       <h2 class="comment__title">{{ name }}, please add your comment</h2>
     </div>
-    <Form ref="form" class="comment__form" @submit="handleSubmit">
+    <Form ref="form" class="comment__form" @submit.prevent="handleSubmit">
       <textarea
         class="comment__input"
         v-model="formData.comment"
@@ -77,6 +77,12 @@ export default {
         this.loading = true;
         await this.comment(data);
         form.reset();
+        this.formData.comment = "";
+        this.rating = "";
+        this.$notify({
+          type: "success",
+          title: "Thank you! please reload page)",
+        });
       } catch (error) {
         this.$notify({
           type: "error",
@@ -87,31 +93,6 @@ export default {
         this.loading = false;
       }
     },
-
-    // async handleSubmit() {
-    //   const data = {
-    //     content: this.formData.comment,
-    //     author: this.name,
-    //     rating: this.rating,
-    //   };
-    //   console.log("handleSubmit  data:", data);
-    //   const { id } = this.$route.params;
-    //   console.log("handleSubmit  id:", id);
-
-    //   try {
-    //     this.loading = true;
-    //     await addComment(id);
-    //     this.formData.comment = "";
-    //   } catch (error) {
-    //     this.$notify({
-    //       type: "error",
-    //       title: "Error",
-    //       text: error.message,
-    //     });
-    //   } finally {
-    //     this.loading = false;
-    //   }
-    // },
   },
 };
 </script>
