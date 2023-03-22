@@ -81,8 +81,9 @@ export default {
         this.rating = "";
         this.$notify({
           type: "success",
-          title: "Thank you! please reload page)",
+          title: "Thank you!",
         });
+        this.$router.push({ name: "homepage" });
       } catch (error) {
         this.$notify({
           type: "error",
