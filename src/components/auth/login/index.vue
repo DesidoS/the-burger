@@ -12,7 +12,7 @@
         class="login__input"
         type="text"
         required
-        pattern="[A-Za-z]+"
+        pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$"
       />
       <MainTitle :level="2" class="login__title"
         >How old are you/Скільки вам років</MainTitle
