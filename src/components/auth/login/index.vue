@@ -59,11 +59,19 @@ export default {
   },
   methods: {
     async handleSubmit() {
-      if (this.formData.name && this.formData.age === "") {
+      if (!this.formData.name) {
         this.$notify({
           type: "error",
-          title: "Empty fields",
+          title: "Please enter your name",
         });
+        return;
+      }
+      if (!this.formData.age) {
+        this.$notify({
+          type: "error",
+          title: "Please enter your age",
+        });
+        return;
       }
       localStorage.setItem("Name", this.formData.name);
       localStorage.setItem("Age", this.formData.age);

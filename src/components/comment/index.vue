@@ -29,9 +29,10 @@
 <script>
 import Form from "../shared/form";
 import CustomSelect from "../shared/CustomSelect";
+import Button from "../shared/Button";
+
 import { mapActions } from "vuex";
 
-import Button from "../shared/Button";
 export default {
   name: "App-Сomment",
   components: {

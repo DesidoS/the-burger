@@ -3,20 +3,13 @@
     <div class="burgers-item__inner">
       <img :src="imgUrl" alt="" class="burgers-item__photo" />
       <div class="burgers-item__content">
-        <p class="burgers-item__title">
-          {{ title }}
-        </p>
-        <p class="burgers-item__description">
-          {{ descr }}
-        </p>
+        <p class="burgers-item__title">{{ title }}</p>
+        <p class="burgers-item__description">{{ descr }}</p>
         <div class="burgers-item__rating">
           <StarRating :rating="totalRating" />
         </div>
         <div class="burgers-item__price">UAH {{ price }}</div>
-        <router-link
-          :to="{ name: 'burger', params: { id } }"
-          class="burgers-item__link"
-        ></router-link>
+        <router-link :to="burgerLink" class="burgers-item__link"></router-link>
       </div>
     </div>
   </div>
@@ -26,7 +19,7 @@
 import StarRating from "../StarRating.vue";
 
 export default {
-  name: "burgers-item",
+  name: "BurgersItem",
   components: {
     StarRating,
   },
@@ -61,10 +54,13 @@ export default {
   computed: {
     totalRating() {
       const total = this.comments.reduce(
-        (acc, comment) => acc + comment.rating.length,
+        (acc, comment) => acc + comment.rating,
         0
       );
-      return total / this.comments.length;
+      return this.comments.length > 0 ? total / this.comments.length : 0;
+    },
+    burgerLink() {
+      return { name: "burger", params: { id: this.id } };
     },
   },
 };

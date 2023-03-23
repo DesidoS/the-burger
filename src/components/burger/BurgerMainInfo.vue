@@ -43,12 +43,6 @@ export default {
 .burgers-main-info {
   display: flex;
   flex-direction: column;
-  // @media screen and (min-width: 600px) and (max-width: 899px) {
-  //   // max-width: 50%;
-  // }
-  // @media screen and (min-width: 900px) {
-  //   // width: 33.33%;
-  // }
   &__heading {
     display: flex;
   }
