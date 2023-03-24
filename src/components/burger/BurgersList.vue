@@ -1,6 +1,6 @@
 <template>
   <Container>
-    <div class="burger-list">
+    <div v-if="items.length" class="burger-list">
       <BurgerItem
         v-for="{ _id, descr, price, rating, imgUrl, title, comment } in items"
         :key="_id"

@@ -1,12 +1,18 @@
 <template>
   <div class="container">
-    <slot>Default value</slot>
+    <slot>
+      <CircleLoader width="100" height="100" color="#fabf00" />
+    </slot>
   </div>
 </template>
 
 <script>
+import CircleLoader from "../loader/CircleLoader.vue";
 export default {
   name: "shared-container",
+  components: {
+    CircleLoader,
+  },
 };
 </script>
 

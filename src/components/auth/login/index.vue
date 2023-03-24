@@ -24,7 +24,7 @@
         type="number"
         name="age"
         required
-        pattern="[0-9]+"
+        pattern="[1-9][0-9]*"
         class="login__input"
       />
       <Button class="login__btn" type="submit" :loading="loading">Enter</Button>
@@ -66,10 +66,18 @@ export default {
         });
         return;
       }
+
       if (!this.formData.age) {
         this.$notify({
           type: "error",
           title: "Please enter your age",
+        });
+        return;
+      }
+      if (this.formData.age < 1) {
+        this.$notify({
+          type: "error",
+          title: "Please enter a positive number",
         });
         return;
       }

@@ -6,7 +6,7 @@
     <div class="burgers-main-info__heading">
       <h1 class="burgers-main-info__title">{{ burger.title }}</h1>
     </div>
-    <img :src="burger.imgUrl" alt="" class="burgers-main-info__photo" />
+    <img :src="burger.imgUrl" alt="burger" class="burgers-main-info__photo" />
     <p class="burgers-main-info__description">{{ burger.descr }}</p>
     <div class="burgers-main-info__btn"></div>
   </article>
