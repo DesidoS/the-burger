@@ -54,7 +54,7 @@ export default {
   computed: {
     totalRating() {
       const total = this.comments.reduce(
-        (acc, comment) => acc + comment.rating,
+        (acc, comment) => acc + comment.rating.length,
         0
       );
       return this.comments.length > 0 ? total / this.comments.length : 0;
