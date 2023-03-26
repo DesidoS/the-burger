@@ -15,7 +15,7 @@
       <CustomSelect
         :items="ratings"
         v-model="rating"
-        aria-placeholder="asdasd"
+        aria-placeholder=""
         class="comment__select"
         required
       />
