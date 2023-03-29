@@ -21,6 +21,7 @@ import BurgerMainInfo from "../components/burger/BurgerMainInfo";
 import Reviews from "../components/reviews";
 import AppСomment from "../components/comment";
 import { getBurgerById } from "../services/burgers.service";
+import { getComments } from "../services/reviews.service";
 
 export default {
   name: "BurgerPage",
@@ -37,14 +38,20 @@ export default {
       reviewsList: [],
     };
   },
-
   async created() {
     try {
       const { id } = this.$route.params;
       const { data } = await getBurgerById(id);
-
       this.burger = data;
-      this.reviewsList = data.comment;
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  async updated() {
+    try {
+      const { id } = this.$route.params;
+      const { data } = await getComments(id);
+      this.reviewsList = data.reverse();
     } catch (error) {
       console.error(error);
     }
@@ -58,6 +65,7 @@ export default {
 
   &__content {
     display: flex;
+    justify-content: center;
     @media screen and (max-width: 599px) {
       flex-direction: column;
     }

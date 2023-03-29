@@ -44,6 +44,7 @@ export default {
     return {
       loading: false,
       name: localStorage.getItem("Name"),
+      age: localStorage.getItem("Age"),
       rating: "",
       formData: {
         comment: "",
@@ -72,6 +73,7 @@ export default {
           content: this.formData.comment,
           author: this.name,
           rating: this.rating,
+          age: this.age,
         },
       };
       try {
@@ -84,7 +86,7 @@ export default {
           type: "success",
           title: "Thank you!",
         });
-        this.$router.push({ name: "homepage" });
+        // this.$router.push({ name: "homepage" });
       } catch (error) {
         this.$notify({
           type: "error",

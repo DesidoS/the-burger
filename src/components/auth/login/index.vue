@@ -38,6 +38,7 @@ import CustomInput from "../../shared/CustomInput";
 import Button from "../../shared/Button";
 import AuthContainer from "../AuthContainer";
 import MainTitle from "../../shared/MainTitle";
+import { mapActions } from "vuex";
 
 export default {
   name: "AppLogin",
@@ -58,6 +59,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions("comment", ["login"]),
     async handleSubmit() {
       if (!this.formData.name) {
         this.$notify({
@@ -81,6 +83,7 @@ export default {
         });
         return;
       }
+      this.login(this.formData);
       localStorage.setItem("Name", this.formData.name);
       localStorage.setItem("Age", this.formData.age);
       this.$router.push({ name: "homepage" });

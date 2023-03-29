@@ -2,8 +2,11 @@ import { addComment } from "../../services/reviews.service";
 
 const initialState = {
   author: "",
-  rating: "",
-  content: "",
+  age: "",
+  data: {
+    rating: "",
+    content: "",
+  },
 };
 
 export default {
@@ -11,21 +14,27 @@ export default {
   state: { ...initialState },
   getters: {
     isLoggedIn(state) {
-      return Boolean(state.token);
+      return Boolean(state.author);
     },
   },
   mutations: {
     setUserData(state, data) {
-      state = data;
+      state.author = data.name;
+      state.age = data.age;
+    },
+    setComment(state, data) {
+      state.data = data;
     },
   },
   actions: {
     async comment({ commit }, payload) {
-      const { data } = payload;
       await addComment(payload);
-      const { author, rating, content } = data;
+      commit("setComment", { ...payload.data });
+    },
 
-      commit("setUserData", { author, rating, content });
+    async login({ commit }, payload) {
+      const { age, name } = payload;
+      commit("setUserData", { age, name });
     },
   },
 };

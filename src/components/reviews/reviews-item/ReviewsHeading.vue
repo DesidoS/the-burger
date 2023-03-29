@@ -2,7 +2,10 @@
   <div class="reviews-heading">
     <Avatar class="reviews-heading__avatar" />
     <div class="reviews-heading__content">
-      <span class="reviews-heading__author">{{ author }}</span>
+      <div>
+        <span class="reviews-heading__author">{{ author }}</span>
+        <span class="reviews-heading__age">{{ age }}</span>
+      </div>
       <Rating :rating="Number(rating.length)" />
     </div>
   </div>
@@ -27,6 +30,10 @@ export default {
       type: String,
       default: "0",
     },
+    age: {
+      type: String,
+      default: "0",
+    },
   },
 };
 </script>
@@ -43,6 +50,9 @@ export default {
   &__content {
     display: flex;
     flex-direction: column;
+  }
+  &__age {
+    margin-left: 40px;
   }
 }
 </style>

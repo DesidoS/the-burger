@@ -1,6 +1,6 @@
 <template>
   <section class="reviews-item">
-    <ReviewsHeading :rating="review.rating" :author="review.author" />
+    <ReviewsHeading :age='review.age' :rating="review.rating" :author="review.author" />
     <p class="reviews-item__content">{{ review.content }}</p>
   </section>
 </template>
