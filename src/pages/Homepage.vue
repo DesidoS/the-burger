@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import BurgersList from "../components/burger/BurgersList.vue";
 import SectionWithHeaderSpacer from "../components/shared/SectionWithHeaderSpacer";
+import BurgersList from "../components/burger/BurgersList.vue";
 import MainTitle from "../components/shared/MainTitle";
 import { getBurgersList } from "../services/burgers.service";
 

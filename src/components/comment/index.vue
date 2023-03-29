@@ -86,7 +86,7 @@ export default {
           type: "success",
           title: "Thank you!",
         });
-        // this.$router.push({ name: "homepage" });
+        this.$emit("comment-added");
       } catch (error) {
         this.$notify({
           type: "error",

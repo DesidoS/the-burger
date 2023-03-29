@@ -5,7 +5,7 @@
         <div v-if="burger" class="burger-page__content">
           <BurgerMainInfo :burger="burger" />
           <div class="burger-page__additional-info">
-            <AppСomment :reviews="reviewsList" />
+            <AppСomment @comment-added="loadReviews" />
             <Reviews :reviews="reviewsList" />
           </div>
         </div>
@@ -43,18 +43,21 @@ export default {
       const { id } = this.$route.params;
       const { data } = await getBurgerById(id);
       this.burger = data;
+      this.reviewsList = data.comment.reverse();
     } catch (error) {
       console.error(error);
     }
   },
-  async updated() {
-    try {
-      const { id } = this.$route.params;
-      const { data } = await getComments(id);
-      this.reviewsList = data.reverse();
-    } catch (error) {
-      console.error(error);
-    }
+  methods: {
+    async loadReviews() {
+      try {
+        const { id } = this.$route.params;
+        const { data } = await getComments(id);
+        this.reviewsList = data.reverse();
+      } catch (error) {
+        console.error(error);
+      }
+    },
   },
 };
 </script>
