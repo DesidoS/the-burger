@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import Form from "../shared/form";
 import CustomSelect from "../shared/CustomSelect";
 import Button from "../shared/Button";
+import Form from "../shared/form";
 
 import { mapActions } from "vuex";
 

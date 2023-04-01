@@ -7,16 +7,18 @@
 </template>
 
 <script>
-import LoginForm from '../components/auth/login';
-import AuthSection from '../components/auth/AuthSection';
+import LoginForm from "../components/auth/login";
+import AuthSection from "../components/auth/AuthSection";
 
 export default {
-  name: 'LoginPage',
+  name: "LoginPage",
   components: {
     LoginForm,
     AuthSection,
   },
+  created() {
+    localStorage.setItem("Name", "");
+    localStorage.setItem("Age", "");
+  },
 };
 </script>
-
-<style lang="scss" scoped></style>

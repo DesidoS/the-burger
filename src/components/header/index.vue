@@ -5,6 +5,7 @@
         <router-link to="/homepage">
           <Logo />
         </router-link>
+        <p v-if="name">Welcome, {{ name }}! Choose you burger.</p>
       </div>
     </Container>
   </header>
@@ -19,6 +20,11 @@ export default {
   components: {
     Container,
     Logo,
+  },
+  data() {
+    return {
+      name: localStorage.getItem("Name"),
+    };
   },
 };
 </script>
